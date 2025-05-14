@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Run tests (optional)
-        run: echo "No tests yet" # ou npm test si tu as vraiment un fichier test
+        run: echo "No tests yet"
 
       - name: Install Railway CLI
         run: npm install -g @railway/cli
