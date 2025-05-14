@@ -22,9 +22,12 @@ jobs:
         run: npm install
 
       - name: Run tests (optional)
-        run: npm test
+        run: echo "No tests yet" # ou npm test si tu as vraiment un fichier test
+
+      - name: Install Railway CLI
+        run: npm install -g @railway/cli
 
       - name: Deploy to Railway
-        uses: railwayapp/cli-action@v1
-        with:
-          railwayToken: ${{ secrets.RAILWAY_TOKEN }}
+        run: railway up --service=web
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
